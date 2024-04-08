@@ -1,0 +1,3 @@
+Los datos quedan en un csv. Las columnas importantes son
+
+['estimulo', 'inicio_cruz_fijacion', 'fin_cruz_fijacion','inicio_grabacion', 'fin_grabacion', 'inicio_texto_estimulo', 'fin_texto_estimulo']

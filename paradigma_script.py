@@ -327,16 +327,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=-1.0);
     key_instrucciones = keyboard.Keyboard()
-    
-    # --- Initialize components for Routine "instrucciones" ---
-    instrucciones_text = visual.TextStim(win=win, name='instrucciones_text',
-        text='',
-        font='Open Sans',
-        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-1.0);
-    key_instrucciones = keyboard.Keyboard()
+
     
     # --- Initialize components for Routine "instruciones_fijas" ---
     text_7 = visual.TextStim(win=win, name='text_7',
@@ -383,16 +374,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=-3.0);
     
-    # --- Initialize components for Routine "instrucciones" ---
-    instrucciones_text = visual.TextStim(win=win, name='instrucciones_text',
-        text='',
-        font='Open Sans',
-        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-1.0);
-    key_instrucciones = keyboard.Keyboard()
-    
     # --- Initialize components for Routine "instrucciones_fijas2" ---
     text_6 = visual.TextStim(win=win, name='text_6',
         text='Ahora pasaremos a otra categoría \n\n¿Listo? \n\n\nPresione ESPACIO para continuar.',
@@ -403,40 +384,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         depth=0.0);
     key_categorias = keyboard.Keyboard()
     
-    # --- Initialize components for Routine "cruz_fijacion" ---
-    cruz_fijacion_text = visual.TextStim(win=win, name='cruz_fijacion_text',
-        text='+',
-        font='Open Sans',
-        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=0.0);
-    blank = visual.TextStim(win=win, name='blank',
-        text='\n',
-        font='Open Sans',
-        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-1.0);
-    
-    # --- Initialize components for Routine "grabacion_con_estimulo" ---
-    text_estimulo = visual.TextStim(win=win, name='text_estimulo',
-        text='',
-        font='Open Sans',
-        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-1.0);
-    sound_1 = sound.Sound('resources/beep.wav', secs=0.5, stereo=True, hamming=True,
-        name='sound_1')
-    sound_1.setVolume(1.0)
-    blank_2 = visual.TextStim(win=win, name='blank_2',
-        text=None,
-        font='Open Sans',
-        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-3.0);
+
     
     # --- Initialize components for Routine "Instrucciones_Opcional" ---
     text_10 = visual.TextStim(win=win, name='text_10',
@@ -447,41 +395,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     key_insultos = keyboard.Keyboard()
-    
-    # --- Initialize components for Routine "cruz_fijacion" ---
-    cruz_fijacion_text = visual.TextStim(win=win, name='cruz_fijacion_text',
-        text='+',
-        font='Open Sans',
-        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=0.0);
-    blank = visual.TextStim(win=win, name='blank',
-        text='\n',
-        font='Open Sans',
-        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-1.0);
-    
-    # --- Initialize components for Routine "grabacion_con_estimulo" ---
-    text_estimulo = visual.TextStim(win=win, name='text_estimulo',
-        text='',
-        font='Open Sans',
-        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-1.0);
-    sound_1 = sound.Sound('resources/beep.wav', secs=0.5, stereo=True, hamming=True,
-        name='sound_1')
-    sound_1.setVolume(1.0)
-    blank_2 = visual.TextStim(win=win, name='blank_2',
-        text=None,
-        font='Open Sans',
-        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-3.0);
+
     
     # --- Initialize components for Routine "end" ---
     text_2 = visual.TextStim(win=win, name='text_2',
@@ -927,6 +841,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 # update status
                 cruz_fijacion_text.status = STARTED
                 cruz_fijacion_text.setAutoDraw(True)
+                thisExp.addData('inicio_cruz_fijacion', globalClock.getTime(format="%H:%M:%S.%f%z"))
+
             
             # if cruz_fijacion_text is active this frame...
             if cruz_fijacion_text.status == STARTED:
@@ -945,6 +861,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     # update status
                     cruz_fijacion_text.status = FINISHED
                     cruz_fijacion_text.setAutoDraw(False)
+                    thisExp.addData('fin_cruz_fijacion', globalClock.getTime(format="%H:%M:%S.%f%z"))
+
+                    
             
             # *blank* updates
             
@@ -1009,9 +928,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # --- Prepare to start Routine "grabacion_con_estimulo" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('grabacion_con_estimulo.started', globalClock.getTime())
+        thisExp.addData('grabacion_con_estimulo.started', globalClock.getTime(format="%H:%M:%S.%f%z"))
         # Run 'Begin Routine' code from code
         recorder.start_recording(f'data/{expInfo["Nombre"]}/HospitalItaliano_{expInfo["Nombre"]}_{estimulo}.wav')
+        thisExp.addData('inicio_grabacion', globalClock.getTime(format="%H:%M:%S.%f%z"))
         text_estimulo.setText(estimulo)
         sound_1.setSound('resources/beep.wav', secs=0.5, hamming=True)
         sound_1.setVolume(1.0, log=False)
@@ -1032,7 +952,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         
         # --- Run Routine "grabacion_con_estimulo" ---
         routineForceEnded = not continueRoutine
-        while continueRoutine and routineTimer.getTime() < 6.0:
+        while continueRoutine and routineTimer.getTime() < 61.0:
             # get current time
             t = routineTimer.getTime()
             tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1050,10 +970,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 text_estimulo.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(text_estimulo, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'text_estimulo.started')
+                # thisExp.timestampOnFlip(win, 'texto_estimulo.started')
                 # update status
                 text_estimulo.status = STARTED
                 text_estimulo.setAutoDraw(True)
+                thisExp.addData('inicio_texto_estimulo', globalClock.getTime(format="%H:%M:%S.%f%z"))
+
             
             # if text_estimulo is active this frame...
             if text_estimulo.status == STARTED:
@@ -1068,10 +990,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     text_estimulo.tStop = t  # not accounting for scr refresh
                     text_estimulo.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'text_estimulo.stopped')
+                    # thisExp.timestampOnFlip(win, 'fin_texto_estimulo')
                     # update status
                     text_estimulo.status = FINISHED
                     text_estimulo.setAutoDraw(False)
+                    thisExp.addData('fin_texto_estimulo', globalClock.getTime(format="%H:%M:%S.%f%z"))
+
             
             # if sound_1 is starting this frame...
             if sound_1.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
@@ -1120,7 +1044,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # if blank_2 is stopping this frame...
             if blank_2.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > blank_2.tStartRefresh + 5-frameTolerance:
+                if tThisFlipGlobal > blank_2.tStartRefresh + 60-frameTolerance:
                     # keep track of stop time/frame for later
                     blank_2.tStop = t  # not accounting for scr refresh
                     blank_2.frameNStop = frameN  # exact frame index
@@ -1153,9 +1077,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in grabacion_con_estimuloComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('grabacion_con_estimulo.stopped', globalClock.getTime())
+        thisExp.addData('grabacion_con_estimulo.stopped', globalClock.getTime(format="%H:%M:%S.%f%z"))
         # Run 'End Routine' code from code
         recorder.stop_recording()
+        thisExp.addData('fin_grabacion', globalClock.getTime(format="%H:%M:%S.%f%z"))
         sound_1.pause()  # ensure sound has stopped at end of Routine
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if routineForceEnded:
@@ -1472,6 +1397,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 # update status
                 cruz_fijacion_text.status = STARTED
                 cruz_fijacion_text.setAutoDraw(True)
+                thisExp.addData('inicio_cruz_fijacion', globalClock.getTime(format="%H:%M:%S.%f%z"))
+
             
             # if cruz_fijacion_text is active this frame...
             if cruz_fijacion_text.status == STARTED:
@@ -1490,6 +1417,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     # update status
                     cruz_fijacion_text.status = FINISHED
                     cruz_fijacion_text.setAutoDraw(False)
+                    thisExp.addData('fin_cruz_fijacion', globalClock.getTime(format="%H:%M:%S.%f%z"))
             
             # *blank* updates
             
@@ -1554,9 +1482,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # --- Prepare to start Routine "grabacion_con_estimulo" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('grabacion_con_estimulo.started', globalClock.getTime())
+        thisExp.addData('grabacion_con_estimulo.started', globalClock.getTime(format="%H:%M:%S.%f%z"))
         # Run 'Begin Routine' code from code
         recorder.start_recording(f'data/{expInfo["Nombre"]}/HospitalItaliano_{expInfo["Nombre"]}_{estimulo}.wav')
+        thisExp.addData('inicio_grabacion', globalClock.getTime(format="%H:%M:%S.%f%z"))
         text_estimulo.setText(estimulo)
         sound_1.setSound('resources/beep.wav', secs=0.5, hamming=True)
         sound_1.setVolume(1.0, log=False)
@@ -1577,7 +1506,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         
         # --- Run Routine "grabacion_con_estimulo" ---
         routineForceEnded = not continueRoutine
-        while continueRoutine and routineTimer.getTime() < 6.0:
+        while continueRoutine and routineTimer.getTime() < 61.0:
             # get current time
             t = routineTimer.getTime()
             tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1595,10 +1524,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 text_estimulo.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(text_estimulo, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'text_estimulo.started')
+                # thisExp.timestampOnFlip(win, 'inicio_texto_estimulo')
                 # update status
                 text_estimulo.status = STARTED
                 text_estimulo.setAutoDraw(True)
+                thisExp.addData('inicio_texto_estimulo', globalClock.getTime(format="%H:%M:%S.%f%z"))
+
             
             # if text_estimulo is active this frame...
             if text_estimulo.status == STARTED:
@@ -1613,10 +1544,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     text_estimulo.tStop = t  # not accounting for scr refresh
                     text_estimulo.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'text_estimulo.stopped')
+                    # thisExp.timestampOnFlip(win, 'fin_texto_estimulo')
                     # update status
                     text_estimulo.status = FINISHED
                     text_estimulo.setAutoDraw(False)
+                    thisExp.addData('fin_texto_estimulo', globalClock.getTime(format="%H:%M:%S.%f%z"))
+
             
             # if sound_1 is starting this frame...
             if sound_1.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
@@ -1665,7 +1598,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # if blank_2 is stopping this frame...
             if blank_2.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > blank_2.tStartRefresh + 5-frameTolerance:
+                if tThisFlipGlobal > blank_2.tStartRefresh + 60-frameTolerance:
                     # keep track of stop time/frame for later
                     blank_2.tStop = t  # not accounting for scr refresh
                     blank_2.frameNStop = frameN  # exact frame index
@@ -1698,9 +1631,11 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in grabacion_con_estimuloComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('grabacion_con_estimulo.stopped', globalClock.getTime())
+        thisExp.addData('grabacion_con_estimulo.stopped', globalClock.getTime(format="%H:%M:%S.%f%z"))
         # Run 'End Routine' code from code
         recorder.stop_recording()
+        thisExp.addData('fin_grabacion', globalClock.getTime(format="%H:%M:%S.%f%z"))
+
         sound_1.pause()  # ensure sound has stopped at end of Routine
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if routineForceEnded:
@@ -1900,6 +1835,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 # update status
                 cruz_fijacion_text.status = STARTED
                 cruz_fijacion_text.setAutoDraw(True)
+                thisExp.addData('inicio_cruz_fijacion', globalClock.getTime(format="%H:%M:%S.%f%z"))
             
             # if cruz_fijacion_text is active this frame...
             if cruz_fijacion_text.status == STARTED:
@@ -1918,6 +1854,8 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     # update status
                     cruz_fijacion_text.status = FINISHED
                     cruz_fijacion_text.setAutoDraw(False)
+                    thisExp.addData('fin_cruz_fijacion', globalClock.getTime(format="%H:%M:%S.%f%z"))
+
             
             # *blank* updates
             
@@ -1982,9 +1920,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # --- Prepare to start Routine "grabacion_con_estimulo" ---
         continueRoutine = True
         # update component parameters for each repeat
-        thisExp.addData('grabacion_con_estimulo.started', globalClock.getTime())
+        thisExp.addData('grabacion_con_estimulo.started', globalClock.getTime(format="%H:%M:%S.%f%z"))
         # Run 'Begin Routine' code from code
         recorder.start_recording(f'data/{expInfo["Nombre"]}/HospitalItaliano_{expInfo["Nombre"]}_{estimulo}.wav')
+        thisExp.addData('inicio_grabacion', globalClock.getTime(format="%H:%M:%S.%f%z"))
         text_estimulo.setText(estimulo)
         sound_1.setSound('resources/beep.wav', secs=0.5, hamming=True)
         sound_1.setVolume(1.0, log=False)
@@ -2005,7 +1944,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         
         # --- Run Routine "grabacion_con_estimulo" ---
         routineForceEnded = not continueRoutine
-        while continueRoutine and routineTimer.getTime() < 6.0:
+        while continueRoutine and routineTimer.getTime() < 61.0:
             # get current time
             t = routineTimer.getTime()
             tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -2023,10 +1962,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 text_estimulo.tStartRefresh = tThisFlipGlobal  # on global time
                 win.timeOnFlip(text_estimulo, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'text_estimulo.started')
+                # thisExp.timestampOnFlip(win, 'inicio_texto_estimulo')
                 # update status
                 text_estimulo.status = STARTED
                 text_estimulo.setAutoDraw(True)
+                thisExp.addData('inicio_texto_estimulo', globalClock.getTime(format="%H:%M:%S.%f%z"))
+
             
             # if text_estimulo is active this frame...
             if text_estimulo.status == STARTED:
@@ -2041,10 +1982,12 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                     text_estimulo.tStop = t  # not accounting for scr refresh
                     text_estimulo.frameNStop = frameN  # exact frame index
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'text_estimulo.stopped')
+                    # thisExp.timestampOnFlip(win, 'fin_texto_estimulo')
                     # update status
                     text_estimulo.status = FINISHED
                     text_estimulo.setAutoDraw(False)
+                    thisExp.addData('fin_texto_estimulo', globalClock.getTime(format="%H:%M:%S.%f%z"))
+
             
             # if sound_1 is starting this frame...
             if sound_1.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
@@ -2093,7 +2036,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             # if blank_2 is stopping this frame...
             if blank_2.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > blank_2.tStartRefresh + 5-frameTolerance:
+                if tThisFlipGlobal > blank_2.tStartRefresh + 60-frameTolerance:
                     # keep track of stop time/frame for later
                     blank_2.tStop = t  # not accounting for scr refresh
                     blank_2.frameNStop = frameN  # exact frame index
@@ -2126,9 +2069,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in grabacion_con_estimuloComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        thisExp.addData('grabacion_con_estimulo.stopped', globalClock.getTime())
+        thisExp.addData('grabacion_con_estimulo.stopped', globalClock.getTime(format="%H:%M:%S.%f%z"))
         # Run 'End Routine' code from code
         recorder.stop_recording()
+        thisExp.addData('fin_grabacion', globalClock.getTime(format="%H:%M:%S.%f%z"))
         sound_1.pause()  # ensure sound has stopped at end of Routine
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if routineForceEnded:
@@ -2146,7 +2090,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # --- Prepare to start Routine "end" ---
     continueRoutine = True
     # update component parameters for each repeat
-    thisExp.addData('end.started', globalClock.getTime())
+    thisExp.addData('end.started', globalClock.getTime(format="%H:%M:%S.%f%z"))
     key_resp_4.keys = []
     key_resp_4.rt = []
     _key_resp_4_allKeys = []
@@ -2245,7 +2189,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     for thisComponent in endComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('end.stopped', globalClock.getTime())
+    thisExp.addData('end.stopped', globalClock.getTime(format="%H:%M:%S.%f%z"))
     # check responses
     if key_resp_4.keys in ['', [], None]:  # No response was made
         key_resp_4.keys = None
