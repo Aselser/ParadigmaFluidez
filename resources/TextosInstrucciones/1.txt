@@ -1,0 +1,7 @@
+Se le presentará una letra en el centro de la pantalla. Inmediatamente, deberá decir en voz alta todas las palabras que pueda que comiencen con esa letra. No podrá mencionar nombres propios (por ejemplo, Juan) ni palabras derivadas (como "pelotita" o "casita").
+
+Diga todas las palabras que pueda hasta que le indique detenerse.
+
+¿Está listo para comenzar?
+
+Presione ESPACIO para continuar.
