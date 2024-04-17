@@ -251,7 +251,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="cont_inst += 1" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="cont_inst += 1&amp;#10;key_insultos.keys = []" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -587,7 +587,7 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="grabacion_con_estimulo" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="key_insultos.keys == 's'" valType="code" updates="constant" name="skipIf"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
@@ -628,7 +628,7 @@
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="1" valType="code" updates="constant" name="stopVal"/>
+        <Param val="5" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$estimulo" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
@@ -643,7 +643,7 @@
         <Param val="resources/beep.wav" valType="str" updates="constant" name="sound"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.5" valType="code" updates="None" name="startVal"/>
+        <Param val="4.5" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="0.5" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="constant" name="stopWithRoutine"/>
@@ -667,7 +667,7 @@
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="1" valType="code" updates="None" name="startVal"/>
+        <Param val="5" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="60" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -675,6 +675,25 @@
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
+      <KeyboardComponent name="interrupt" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="interrupt" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="5.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="60" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
     </Routine>
     <Routine name="instruciones_fijas">
       <RoutineSettingsComponent name="instruciones_fijas" plugin="None">
@@ -809,7 +828,7 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="cruz_fijacion" valType="code" updates="None" name="name"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="key_insultos.keys == 's'" valType="code" updates="constant" name="skipIf"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="0.65" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
@@ -936,12 +955,12 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="MODULO OPCIONAL&amp;#10;&amp;#10;Presione ESPACIO para continuar&amp;#10;Presione ESC para terminar el experimento" valType="str" updates="constant" name="text"/>
+        <Param val="MODULO OPCIONAL&amp;#10;&amp;#10;Presione ESPACIO para continuar&amp;#10;Presione S para saltar" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="key_insultos" plugin="None">
-        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="'space','s'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
@@ -1081,22 +1100,6 @@
   <Flow>
     <Routine name="instrucciones"/>
     <Routine name="instrucciones"/>
-    <LoopInitiator loopType="TrialHandler" name="letras">
-      <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="[{'estimulo': 'F'}, {'estimulo': 'A'}, {'estimulo': 'S'}]" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="resources/letras.xlsx" valType="file"/>
-      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
-      <Param name="isTrials" updates="None" val="True" valType="bool"/>
-      <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="1" valType="num"/>
-      <Param name="name" updates="None" val="letras" valType="code"/>
-      <Param name="random seed" updates="None" val="" valType="code"/>
-    </LoopInitiator>
-    <Routine name="instruciones_fijas"/>
-    <Routine name="cruz_fijacion"/>
-    <Routine name="grabacion_con_estimulo"/>
-    <LoopTerminator name="letras"/>
-    <Routine name="instrucciones"/>
     <LoopInitiator loopType="TrialHandler" name="categorias">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[{'estimulo': 'ANIMALES'}, {'estimulo': 'ACCIONES'}, {'estimulo': 'OBJETOS DE SUPERMERCADO'}]" valType="str"/>
@@ -1127,6 +1130,22 @@
     <Routine name="cruz_fijacion"/>
     <Routine name="grabacion_con_estimulo"/>
     <LoopTerminator name="insultos"/>
+    <Routine name="instrucciones"/>
+    <LoopInitiator loopType="TrialHandler" name="letras">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'estimulo': 'F'}, {'estimulo': 'A'}, {'estimulo': 'S'}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="resources/letras.xlsx" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="letras" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="instruciones_fijas"/>
+    <Routine name="cruz_fijacion"/>
+    <Routine name="grabacion_con_estimulo"/>
+    <LoopTerminator name="letras"/>
     <Routine name="end"/>
   </Flow>
 </PsychoPy2experiment>

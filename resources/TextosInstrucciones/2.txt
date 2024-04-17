@@ -1,7 +1,7 @@
-Se le presentará una categoría en el centro de la pantalla. Inmediatamente, deberá decir en voz alta todas las palabras que pueda que pertenezcan a esa categoría. No podrá mencionar nombres propios (por ejemplo, Juan) ni palabras derivadas (como "pelotita" o "casita").
+Se le presentará una letra en el centro de la pantalla. Inmediatamente, deberá decir en voz alta todas las palabras que pueda que comiencen con esa letra. No podrá mencionar nombres propios (por ejemplo, Juan) ni palabras derivadas (como "pelotita" o "casita").
 
-Diga todas las palabras que pueda hasta que le indique detenerse.
+Espere la señal sonora y luego diga todas las palabras que pueda hasta que le indique detenerse.
 
 ¿Está listo para comenzar?
 
-Presione espacio para continuar.
+Presione ESPACIO para continuar.

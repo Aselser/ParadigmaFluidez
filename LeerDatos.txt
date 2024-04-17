@@ -1,3 +1,7 @@
-Los datos quedan en un csv. Las columnas importantes son
+Los datos quedan en un csv. 
 
-['estimulo', 'inicio_cruz_fijacion', 'fin_cruz_fijacion','inicio_grabacion', 'fin_grabacion', 'inicio_texto_estimulo', 'fin_texto_estimulo']
+Se puede interrumpir el minuto con el espacio
+
+Las columnas importantes son:
+
+inicio_cruz_fijacion, fin_cruz_fijacion, inicio_grabacion, inicio_estimulo, inicio_beep, fin_beep, fin_estimulo, fin_grabacion
